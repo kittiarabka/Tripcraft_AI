@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Perforated "tear line" between ticket sections */
+.ticket-perforation {
+    background-image: radial-gradient(circle, #f3ecda 3px, transparent 3.5px);
+    background-size: 16px 16px;
+    background-repeat: repeat-x;
+    background-position: center;
+    height: 2px;
+}
+
+/* Notches cut into the card edge, like a real ticket stub */
+.ticket-notch::before,
+.ticket-notch::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--notch-bg, #f3ecda);
+    border-radius: 9999px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ticket-notch::before {
+    left: -10px;
+}
+.ticket-notch::after {
+    right: -10px;
+}
