@@ -13,7 +13,7 @@ services:
       - key: APP_KEY
         sync: false
       - key: APP_URL
-        value: "https://tripcraft-ai.onrender.com"
+        value: "https://tripcraft-ai-bmbc.onrender.com"
       - key: APP_LOCALE
         value: ru
       - key: LOG_CHANNEL
